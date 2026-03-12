@@ -1,0 +1,517 @@
+{
+  "app": {
+    "title": "EU AI Act",
+    "subtitle": "Compliance Tool"
+  },
+  "nav": {
+    "compliance": "Compliance-Check",
+    "training": "Schulung",
+    "settings": "Einstellungen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "language": "Sprache",
+    "theme": "Design",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel"
+  },
+  "compliance": {
+    "title": "EU AI Act Compliance-Check",
+    "tabs": {
+      "classify": "Risikoklassifizierung",
+      "checklist": "Checkliste",
+      "dashboard": "Dashboard"
+    },
+    "wizard": {
+      "title": "Risikoklassifizierungs-Assistent",
+      "subtitle": "Beantworten Sie die folgenden Fragen, um die Risikostufe Ihres KI-Systems zu bestimmen.",
+      "question": "Frage {{current}} von {{total}}",
+      "back": "Zurück",
+      "next": "Weiter",
+      "viewResults": "Ergebnis anzeigen",
+      "resultTitle": "Klassifizierungsergebnis",
+      "resultDescription": "Basierend auf Ihren Antworten wird Ihr KI-System wie folgt eingestuft:",
+      "continueToChecklist": "Weiter zur Checkliste",
+      "retake": "Neu bewerten",
+      "q1": "Wird Ihr KI-System für einen der folgenden Zwecke eingesetzt?",
+      "q1_social_scoring": "Social Scoring durch Behörden",
+      "q1_biometric": "Biometrische Echtzeit-Identifizierung in öffentlichen Räumen",
+      "q1_manipulation": "Manipulation von Personen durch unterschwellige Techniken",
+      "q1_exploitation": "Ausnutzung von Schwächen bestimmter Personengruppen",
+      "q1_none": "Keines der genannten",
+      "q2": "In welchem Bereich wird Ihr KI-System eingesetzt?",
+      "q2_biometric": "Biometrische Identifizierung / Kategorisierung",
+      "q2_critical": "Kritische Infrastruktur",
+      "q2_education": "Bildung und Berufsausbildung",
+      "q2_employment": "Beschäftigung, Personalmanagement, Recruiting",
+      "q2_services": "Wesentliche öffentliche/private Dienstleistungen (Kredit, Versicherung)",
+      "q2_law": "Strafverfolgung",
+      "q2_migration": "Migration, Asyl, Grenzkontrolle",
+      "q2_justice": "Rechtspflege und demokratische Prozesse",
+      "q2_none": "Keiner der genannten Bereiche",
+      "q3": "Trifft Ihr KI-System Entscheidungen, die Personen wesentlich betreffen?",
+      "q3_autonomous": "Ja, es trifft autonome Entscheidungen",
+      "q3_assists": "Ja, es unterstützt Menschen bei der Entscheidungsfindung",
+      "q3_no": "Nein, rein informative/analytische Ausgabe",
+      "q4": "Interagiert Ihr KI-System direkt mit Endnutzern?",
+      "q4_chatbot": "Ja, es ist ein Chatbot / Konversations-KI",
+      "q4_deepfake": "Ja, es erzeugt oder manipuliert Bilder/Video/Audio (Deepfakes)",
+      "q4_text": "Ja, es erzeugt Text, der als menschlich geschrieben präsentiert wird",
+      "q4_no": "Nein, es arbeitet im Hintergrund",
+      "q5": "Führt Ihr KI-System Emotionserkennung oder biometrische Kategorisierung durch?",
+      "q5_yes": "Ja",
+      "q5_no": "Nein"
+    },
+    "riskLevels": {
+      "unacceptable": "Unzulässiges Risiko",
+      "high": "Hohes Risiko",
+      "limited": "Begrenztes Risiko",
+      "minimal": "Minimales Risiko",
+      "unacceptableDesc": "Dieses KI-System ist gemäß dem EU AI Act verboten.",
+      "highDesc": "Dieses KI-System erfordert umfassende Compliance-Maßnahmen.",
+      "limitedDesc": "Dieses KI-System unterliegt Transparenzpflichten.",
+      "minimalDesc": "Keine spezifischen Anforderungen. Freiwillige Verhaltenskodizes gelten."
+    },
+    "checklist": {
+      "title": "Compliance-Checkliste",
+      "progress": "{{checked}} von {{total}} erledigt",
+      "notClassified": "Bitte führen Sie zuerst die Risikoklassifizierung durch.",
+      "prohibited": "Verbotenes System",
+      "prohibitedDesc": "Ihr KI-System fällt unter die verbotenen Praktiken des EU AI Act.",
+      "prohibited_1": "Dieses KI-System ist gemäß Artikel 5 des EU AI Act verboten",
+      "prohibited_2": "Sie müssen den Einsatz dieses Systems einstellen",
+      "prohibited_3": "Konsultieren Sie einen Rechtsberater für die Übergangsplanung",
+      "risk_mgmt": "Risikomanagementsystem (Art. 9)",
+      "risk_mgmt_desc": "Etablierung und Pflege eines Risikomanagementsystems",
+      "risk_mgmt_1": "Risikomanagementprozess etablieren und dokumentieren",
+      "risk_mgmt_2": "Risiken identifizieren und analysieren",
+      "risk_mgmt_3": "Risikominderungsmaßnahmen festlegen und umsetzen",
+      "risk_mgmt_4": "Wirksamkeit der Maßnahmen testen und überprüfen",
+      "data_gov": "Daten-Governance (Art. 10)",
+      "data_gov_desc": "Qualitätsanforderungen an Trainings- und Testdaten",
+      "data_gov_1": "Qualitätskriterien für Trainingsdaten definieren",
+      "data_gov_2": "Bias-Prüfung der Daten durchführen",
+      "data_gov_3": "Relevanz und Repräsentativität der Daten validieren",
+      "data_gov_4": "Statistische Eigenschaften der Datensätze dokumentieren",
+      "tech_doc": "Technische Dokumentation (Art. 11)",
+      "tech_doc_desc": "Umfassende technische Dokumentation des KI-Systems",
+      "tech_doc_1": "Systembeschreibung und Zweckbestimmung erstellen",
+      "tech_doc_2": "Design-Spezifikationen dokumentieren",
+      "tech_doc_3": "Überwachungs- und Kontrollmechanismen beschreiben",
+      "tech_doc_4": "Risikomanagement-Dokumentation vervollständigen",
+      "records": "Aufzeichnungspflichten (Art. 12)",
+      "records_desc": "Automatische Protokollierung und Nachverfolgbarkeit",
+      "records_1": "Automatische Ereignisprotokollierung implementieren",
+      "records_2": "Rückverfolgbarkeit des Betriebszeitraums sicherstellen",
+      "records_3": "Aufbewahrungsverfahren für Protokolle festlegen",
+      "transparency": "Transparenz (Art. 13)",
+      "transparency_desc": "Transparenzpflichten gegenüber Nutzern und Betroffenen",
+      "transparency_1": "Bedienungsanleitung für Nutzer bereitstellen",
+      "transparency_2": "Einschränkungen klar kommunizieren",
+      "transparency_3": "Leistungskennzahlen offenlegen",
+      "transparency_4": "Bestimmungsgemäßen Zweck dokumentieren",
+      "human_oversight": "Menschliche Aufsicht (Art. 14)",
+      "human_oversight_desc": "Maßnahmen zur menschlichen Überwachung und Kontrolle",
+      "human_oversight_1": "Maßnahmen zur menschlichen Aufsicht gestalten",
+      "human_oversight_2": "Möglichkeit zur menschlichen Übersteuerung sicherstellen",
+      "human_oversight_3": "Überwachungsschnittstellen bereitstellen",
+      "accuracy": "Genauigkeit, Robustheit, Cybersicherheit (Art. 15)",
+      "accuracy_desc": "Anforderungen an Leistung und Sicherheit",
+      "accuracy_1": "Genauigkeitsniveaus deklarieren und dokumentieren",
+      "accuracy_2": "Widerstandsfähigkeit gegen Fehler testen",
+      "accuracy_3": "Cybersicherheitsmaßnahmen implementieren",
+      "qms": "Qualitätsmanagementsystem (Art. 17)",
+      "qms_desc": "Aufbau und Pflege eines Qualitätsmanagementsystems",
+      "qms_1": "QMS etablieren und dokumentieren",
+      "qms_2": "Verfahren für Datenmanagement festlegen",
+      "qms_3": "Dokumentenlenkungsverfahren einrichten",
+      "conformity": "Konformitätsbewertung (Art. 43)",
+      "conformity_desc": "Durchführung der erforderlichen Konformitätsbewertung",
+      "conformity_1": "Interne Konformitätsbewertung durchführen",
+      "conformity_2": "Bewertung durch Dritte beauftragen (falls erforderlich)",
+      "ce_marking": "CE-Kennzeichnung (Art. 48-49)",
+      "ce_marking_desc": "CE-Kennzeichnung und Konformitätserklärung",
+      "ce_marking_1": "CE-Kennzeichnung anbringen",
+      "ce_marking_2": "EU-Konformitätserklärung erstellen",
+      "eu_db": "EU-Datenbankregistrierung (Art. 71)",
+      "eu_db_desc": "Registrierung in der EU-Datenbank",
+      "eu_db_1": "System vor Inverkehrbringen in der EU-Datenbank registrieren",
+      "limited_transparency": "Transparenzpflichten",
+      "limited_transparency_desc": "Informationspflichten bei begrenztem Risiko",
+      "limited_transparency_1": "Nutzer über KI-Interaktion informieren",
+      "limited_transparency_2": "KI-generierte Inhalte klar kennzeichnen",
+      "limited_transparency_3": "Deepfake-Inhalte als solche offenlegen",
+      "limited_transparency_4": "Emotionserkennungssystem offenlegen (falls zutreffend)",
+      "voluntary": "Freiwillige Best Practices",
+      "voluntary_desc": "Empfohlene Maßnahmen bei minimalem Risiko",
+      "voluntary_1": "Freiwilligen Verhaltenskodex in Betracht ziehen",
+      "voluntary_2": "Zweck des KI-Systems dokumentieren",
+      "voluntary_3": "Grundlegende Testverfahren implementieren",
+      "voluntary_4": "Auf unbeabsichtigte Auswirkungen überwachen"
+    },
+    "dashboard": {
+      "title": "Compliance-Dashboard",
+      "riskLevel": "Risikostufe",
+      "complianceScore": "Compliance-Score",
+      "itemsCompleted": "Abgeschlossen",
+      "categoryBreakdown": "Aufschlüsselung nach Kategorien",
+      "exportReport": "Bericht exportieren",
+      "resetAssessment": "Bewertung zurücksetzen",
+      "resetConfirm": "Alle Compliance-Daten werden gelöscht. Sind Sie sicher?",
+      "noData": "Führen Sie die Risikoklassifizierung durch, um das Dashboard zu sehen."
+    },
+    "report": {
+      "title": "EU AI Act Compliance-Bericht",
+      "generatedOn": "Erstellt am",
+      "riskClassification": "Risikoklassifizierung",
+      "requirementsStatus": "Status der Anforderungen",
+      "completed": "Erledigt",
+      "pending": "Ausstehend",
+      "overallScore": "Gesamter Compliance-Score"
+    }
+  },
+  "training": {
+    "title": "KI-Kompetenzschulung",
+    "subtitle": "Gemäß Art. 4 EU AI Act (Verordnung (EU) 2024/1689)",
+    "participantName": "Name des Teilnehmers",
+    "participantPlaceholder": "Vor- und Nachname eingeben",
+    "startModule": "Modul starten",
+    "continueModule": "Fortsetzen",
+    "completed": "Abgeschlossen",
+    "notStarted": "Nicht begonnen",
+    "overallProgress": "Gesamtfortschritt",
+    "modulesCompleted": "{{count}} von {{total}} Modulen abgeschlossen",
+    "certificateAvailable": "Zertifikat verfügbar!",
+    "viewCertificate": "Zertifikat anzeigen",
+    "resetTraining": "Schulung zurücksetzen",
+    "resetConfirm": "Alle Schulungsdaten werden gelöscht. Sind Sie sicher?",
+    "backToOverview": "Zurück zur Übersicht",
+    "lesson": "Lektion {{current}} von {{total}}",
+    "nextLesson": "Nächste Lektion",
+    "prevLesson": "Vorherige Lektion",
+    "startQuiz": "Quiz starten",
+    "quiz": {
+      "title": "Wissensüberprüfung",
+      "question": "Frage {{current}} von {{total}}",
+      "submit": "Antwort prüfen",
+      "next": "Nächste Frage",
+      "correct": "Richtig!",
+      "incorrect": "Leider falsch.",
+      "explanation": "Erklärung",
+      "result": "Ergebnis",
+      "score": "{{correct}} von {{total}} richtig ({{percentage}}%)",
+      "passed": "Bestanden!",
+      "failed": "Leider nicht bestanden.",
+      "passThreshold": "Zum Bestehen werden mindestens 80% benötigt.",
+      "retryModule": "Modul wiederholen",
+      "continueTraining": "Weiter zur Übersicht"
+    },
+    "certificate": {
+      "title": "Schulungszertifikat",
+      "heading": "EU AI Act Kompetenznachweis",
+      "certifies": "Hiermit wird bestätigt, dass",
+      "completedTraining": "die Schulung zum EU AI Act erfolgreich absolviert hat.",
+      "modules": "Absolvierte Module",
+      "score": "Ergebnis",
+      "date": "Datum",
+      "certificateId": "Zertifikats-ID",
+      "legalRef": "Gemäß Art. 4 Verordnung (EU) 2024/1689",
+      "print": "Zertifikat drucken",
+      "backToTraining": "Zurück zur Schulung"
+    },
+    "modules": {
+      "m1_title": "Grundlagen des EU AI Act",
+      "m1_desc": "Was ist der EU AI Act, warum gibt es ihn, und wer ist betroffen?",
+      "m2_title": "Risikoklassifizierung verstehen",
+      "m2_desc": "Die vier Risikostufen und ihre Bedeutung für Ihr Unternehmen.",
+      "m3_title": "Pflichten und Anforderungen",
+      "m3_desc": "Pflichten für Anbieter und Betreiber von KI-Systemen.",
+      "m4_title": "Transparenz und menschliche Aufsicht",
+      "m4_desc": "Informationspflichten und Anforderungen an die menschliche Kontrolle.",
+      "m5_title": "Praktische Umsetzung",
+      "m5_desc": "Risikomanagementsystem, Qualitätsmanagement und Konformitätsbewertung."
+    },
+    "content": {
+      "m1": {
+        "l1": {
+          "title": "Was ist der EU AI Act?",
+          "content": "Der EU AI Act (Verordnung (EU) 2024/1689) ist das weltweit erste umfassende Gesetz zur Regulierung von Künstlicher Intelligenz. Es wurde am 13. Juni 2024 vom Europäischen Parlament verabschiedet und trat am 1. August 2024 in Kraft.\n\nDas Gesetz verfolgt einen risikobasierten Ansatz: Je höher das Risiko eines KI-Systems für Gesundheit, Sicherheit oder Grundrechte, desto strenger die Anforderungen. Ziel ist es, vertrauenswürdige KI in Europa zu fördern und gleichzeitig die Grundrechte der Bürger zu schützen.\n\nDer EU AI Act gilt für alle Akteure entlang der KI-Wertschöpfungskette: Anbieter (die KI-Systeme entwickeln), Betreiber (die KI-Systeme einsetzen), Importeure und Händler."
+        },
+        "l2": {
+          "title": "Wer ist betroffen?",
+          "content": "Der EU AI Act betrifft ein breites Spektrum von Akteuren:\n\n- Anbieter (Provider): Unternehmen oder Personen, die KI-Systeme entwickeln oder entwickeln lassen und unter eigenem Namen in Verkehr bringen.\n- Betreiber (Deployer): Unternehmen oder Personen, die KI-Systeme in eigener Verantwortung einsetzen. Dies umfasst auch Unternehmen, die KI-Tools von Drittanbietern nutzen.\n- Importeure und Händler: Wer KI-Systeme aus Drittstaaten in die EU einführt oder vertreibt.\n\nWichtig: Auch Unternehmen außerhalb der EU sind betroffen, wenn ihre KI-Systeme in der EU eingesetzt werden oder die Ergebnisse in der EU genutzt werden. Das Gesetz hat also eine extraterritoriale Wirkung."
+        },
+        "l3": {
+          "title": "Zeitplan der Implementierung",
+          "content": "Der EU AI Act wird stufenweise umgesetzt:\n\n- Februar 2025: Verbote für KI-Systeme mit unzulässigem Risiko treten in Kraft. Verpflichtung zur KI-Kompetenz (Art. 4).\n- August 2025: Anforderungen an KI-Modelle mit allgemeinem Verwendungszweck (GPAI) gelten.\n- August 2026: Vollständige Anwendung für Hochrisiko-KI-Systeme. Konformitätsbewertungen, CE-Kennzeichnung und EU-Datenbankregistrierung werden Pflicht.\n- August 2027: Erweiterte Anforderungen für bestimmte Hochrisiko-Systeme in regulierten Sektoren.\n\nUnternehmen sollten jetzt mit der Vorbereitung beginnen, um rechtzeitig konform zu sein."
+        },
+        "quiz": {
+          "q1": {
+            "question": "Wann wurde der EU AI Act verabschiedet?",
+            "a": "März 2023",
+            "b": "Juni 2024",
+            "c": "Januar 2025",
+            "d": "August 2026",
+            "explanation": "Der EU AI Act wurde am 13. Juni 2024 vom Europäischen Parlament verabschiedet."
+          },
+          "q2": {
+            "question": "Welchen Regulierungsansatz verfolgt der EU AI Act?",
+            "a": "Alle KI-Systeme werden gleich reguliert",
+            "b": "Nur KI in der Medizin wird reguliert",
+            "c": "Einen risikobasierten Ansatz",
+            "d": "Einen branchenspezifischen Ansatz",
+            "explanation": "Der EU AI Act verfolgt einen risikobasierten Ansatz: Je höher das Risiko, desto strenger die Anforderungen."
+          },
+          "q3": {
+            "question": "Wer gilt als 'Betreiber' im Sinne des EU AI Act?",
+            "a": "Unternehmen, die KI-Systeme in eigener Verantwortung einsetzen",
+            "b": "Nur die Entwickler von KI-Systemen",
+            "c": "Ausschließlich staatliche Stellen",
+            "d": "Nur Unternehmen mit Sitz in der EU",
+            "explanation": "Betreiber (Deployer) sind Unternehmen oder Personen, die KI-Systeme in eigener Verantwortung einsetzen."
+          },
+          "q4": {
+            "question": "Wann treten die Anforderungen für Hochrisiko-KI-Systeme vollständig in Kraft?",
+            "a": "Februar 2025",
+            "b": "August 2025",
+            "c": "Februar 2026",
+            "d": "August 2026",
+            "explanation": "Die vollständige Anwendung für Hochrisiko-KI-Systeme gilt ab August 2026."
+          },
+          "q5": {
+            "question": "Gilt der EU AI Act auch für Unternehmen außerhalb der EU?",
+            "a": "Nein, nur für EU-Unternehmen",
+            "b": "Ja, wenn ihre KI-Systeme in der EU eingesetzt werden",
+            "c": "Nur für US-Unternehmen",
+            "d": "Nur bei Exporten in die EU",
+            "explanation": "Der EU AI Act hat extraterritoriale Wirkung und gilt auch für Unternehmen außerhalb der EU, wenn ihre KI-Systeme in der EU eingesetzt werden."
+          }
+        }
+      },
+      "m2": {
+        "l1": {
+          "title": "Die vier Risikostufen",
+          "content": "Der EU AI Act unterteilt KI-Systeme in vier Risikokategorien:\n\n1. Unzulässiges Risiko (verboten): KI-Systeme, die als inakzeptable Bedrohung für Menschen gelten, wie Social Scoring durch Behörden, manipulative KI-Techniken oder biometrische Echtzeit-Identifizierung in öffentlichen Räumen.\n\n2. Hohes Risiko: KI-Systeme in sensiblen Bereichen wie Biometrie, kritische Infrastruktur, Bildung, Beschäftigung, Strafverfolgung oder Justiz. Diese unterliegen strengen Anforderungen.\n\n3. Begrenztes Risiko: KI-Systeme mit Transparenzpflichten, z.B. Chatbots oder Deepfake-Generatoren. Nutzer müssen informiert werden, dass sie mit KI interagieren.\n\n4. Minimales Risiko: Die meisten KI-Anwendungen fallen in diese Kategorie. Es gelten keine spezifischen Anforderungen, aber freiwillige Verhaltenskodizes werden empfohlen."
+        },
+        "l2": {
+          "title": "Beispiele für jede Risikostufe",
+          "content": "Unzulässiges Risiko (verboten):\n- Bewertung des Sozialverhaltens von Bürgern durch Behörden (Social Scoring)\n- Unterschwellige Manipulation des Verhaltens von Personen\n- Ausnutzung von Schwächen bestimmter Personengruppen\n- Biometrische Echtzeit-Fernidentifizierung in öffentlichen Räumen (mit Ausnahmen)\n\nHohes Risiko:\n- KI-gestützte Bewerberauswahl bei Einstellungsverfahren\n- KI zur Bewertung von Prüfungsleistungen in Bildungseinrichtungen\n- KI zur Kreditwürdigkeitsprüfung\n- KI in der medizinischen Diagnostik\n\nBegrenztes Risiko:\n- Chatbots und virtuelle Assistenten\n- KI-generierte Texte, die als menschlich geschrieben präsentiert werden\n- Deepfake-Technologie für Bild- und Videomanipulation\n\nMinimales Risiko:\n- Spam-Filter\n- KI-gestützte Produktempfehlungen\n- KI in Videospielen"
+        },
+        "l3": {
+          "title": "Einstufung Ihres KI-Systems",
+          "content": "Um Ihr KI-System korrekt einzustufen, sollten Sie folgende Fragen beantworten:\n\n1. Fällt Ihr System unter eine der verbotenen Praktiken nach Artikel 5? Wenn ja, ist der Einsatz unzulässig.\n\n2. Wird Ihr System in einem der in Anhang III genannten Hochrisiko-Bereiche eingesetzt? Dazu gehören Biometrie, kritische Infrastruktur, Bildung, Beschäftigung, wesentliche Dienstleistungen, Strafverfolgung, Migration und Justiz.\n\n3. Trifft oder beeinflusst Ihr System wesentlich Entscheidungen, die einzelne Personen betreffen? Dies ist ein wichtiger Faktor für die Hochrisiko-Einstufung.\n\n4. Interagiert Ihr System direkt mit Endnutzern? Chatbots, Deepfake-Generatoren und ähnliche Systeme haben Transparenzpflichten.\n\nDas Compliance-Check-Tool in dieser Anwendung hilft Ihnen bei der systematischen Einstufung."
+        },
+        "quiz": {
+          "q1": {
+            "question": "Welche Risikostufe erfordert die strengsten Compliance-Maßnahmen?",
+            "a": "Minimales Risiko",
+            "b": "Begrenztes Risiko",
+            "c": "Hohes Risiko",
+            "d": "Alle Stufen gleich",
+            "explanation": "Hochrisiko-KI-Systeme unterliegen den strengsten Anforderungen, darunter Risikomanagementsystem, technische Dokumentation und Konformitätsbewertung."
+          },
+          "q2": {
+            "question": "Was ist ein Beispiel für ein KI-System mit unzulässigem Risiko?",
+            "a": "Ein Spam-Filter",
+            "b": "Social Scoring durch Behörden",
+            "c": "Ein Chatbot",
+            "d": "Eine Produktempfehlung",
+            "explanation": "Social Scoring durch Behörden ist gemäß Artikel 5 des EU AI Act verboten."
+          },
+          "q3": {
+            "question": "In welche Risikokategorie fällt ein Chatbot?",
+            "a": "Begrenztes Risiko",
+            "b": "Hohes Risiko",
+            "c": "Minimales Risiko",
+            "d": "Unzulässiges Risiko",
+            "explanation": "Chatbots fallen unter begrenztes Risiko und unterliegen Transparenzpflichten - Nutzer müssen wissen, dass sie mit KI interagieren."
+          },
+          "q4": {
+            "question": "Was kennzeichnet KI-Systeme mit minimalem Risiko?",
+            "a": "Sie sind verboten",
+            "b": "Sie brauchen eine CE-Kennzeichnung",
+            "c": "Sie haben Transparenzpflichten",
+            "d": "Keine spezifischen Anforderungen, freiwillige Verhaltenskodizes",
+            "explanation": "Für KI-Systeme mit minimalem Risiko gelten keine spezifischen regulatorischen Anforderungen. Freiwillige Verhaltenskodizes werden empfohlen."
+          },
+          "q5": {
+            "question": "KI zur Bewertung von Kreditwürdigkeit fällt unter welche Risikostufe?",
+            "a": "Hohes Risiko",
+            "b": "Begrenztes Risiko",
+            "c": "Minimales Risiko",
+            "d": "Unzulässiges Risiko",
+            "explanation": "KI zur Kreditwürdigkeitsprüfung fällt unter hohes Risiko, da sie wesentliche Dienstleistungen betrifft und Entscheidungen über den Zugang zu Finanzdienstleistungen beeinflusst."
+          }
+        }
+      },
+      "m3": {
+        "l1": {
+          "title": "Pflichten für Anbieter",
+          "content": "Anbieter (Provider) von Hochrisiko-KI-Systemen haben umfangreiche Pflichten:\n\n- Risikomanagementsystem: Ein kontinuierlicher Prozess zur Identifizierung, Bewertung und Minderung von Risiken muss etabliert werden.\n- Daten-Governance: Trainingsdaten müssen qualitativ hochwertig, relevant und repräsentativ sein. Bias-Prüfungen sind durchzuführen.\n- Technische Dokumentation: Umfassende Dokumentation des Systems, seiner Funktionsweise und Grenzen.\n- Transparenz: Bereitstellung klarer Informationen für Betreiber und betroffene Personen.\n- Menschliche Aufsicht: Das System muss so gestaltet sein, dass eine wirksame menschliche Überwachung möglich ist.\n- Genauigkeit und Robustheit: Nachgewiesene Leistungsfähigkeit und Widerstandsfähigkeit gegen Fehler und Angriffe."
+        },
+        "l2": {
+          "title": "Pflichten für Betreiber",
+          "content": "Betreiber (Deployer) von Hochrisiko-KI-Systemen müssen:\n\n- Das System gemäß der Gebrauchsanweisung des Anbieters einsetzen.\n- Sicherstellen, dass die Eingabedaten für den vorgesehenen Zweck relevant sind.\n- Die Funktionsfähigkeit des Systems überwachen und bei Fehlfunktionen den Anbieter informieren.\n- Betroffene Personen über den Einsatz des KI-Systems informieren.\n- Bei Systemen, die Entscheidungen über Personen treffen, eine Datenschutz-Folgenabschätzung durchführen.\n- Die automatische Protokollierung aufbewahren, soweit dies in ihrer Kontrolle liegt.\n\nBetreiber, die ein Hochrisiko-System wesentlich verändern, können selbst als Anbieter gelten und müssen dann die Anbieterpflichten erfüllen."
+        },
+        "l3": {
+          "title": "Dokumentations- und Meldepflichten",
+          "content": "Dokumentationspflichten:\n- Technische Dokumentation muss vor dem Inverkehrbringen erstellt werden und stets aktuell gehalten werden.\n- Automatische Protokolle (Logs) müssen mindestens 6 Monate aufbewahrt werden.\n- Die EU-Konformitätserklärung muss 10 Jahre nach Inverkehrbringen verfügbar sein.\n\nMeldepflichten:\n- Schwerwiegende Vorfälle müssen der zuständigen Marktüberwachungsbehörde unverzüglich gemeldet werden.\n- Ein schwerwiegender Vorfall liegt vor, wenn das KI-System den Tod oder eine schwere Gesundheitsschädigung verursacht hat oder hätte verursachen können.\n- Anbieter müssen korrigierende Maßnahmen ergreifen und die Behörden darüber informieren.\n\nBei Verstößen drohen Bußgelder von bis zu 35 Millionen Euro oder 7% des weltweiten Jahresumsatzes."
+        },
+        "quiz": {
+          "q1": {
+            "question": "Wer muss ein Risikomanagementsystem für Hochrisiko-KI etablieren?",
+            "a": "Nur die Betreiber",
+            "b": "Die Anbieter (Provider)",
+            "c": "Nur die EU-Kommission",
+            "d": "Die Endnutzer",
+            "explanation": "Anbieter (Provider) von Hochrisiko-KI-Systemen sind verpflichtet, ein Risikomanagementsystem zu etablieren."
+          },
+          "q2": {
+            "question": "Was müssen Betreiber bei Fehlfunktionen eines KI-Systems tun?",
+            "a": "Das System selbst reparieren",
+            "b": "Nichts, das ist Sache des Anbieters",
+            "c": "Den Anbieter informieren",
+            "d": "Das System sofort abschalten",
+            "explanation": "Betreiber müssen die Funktionsfähigkeit überwachen und bei Fehlfunktionen den Anbieter informieren."
+          },
+          "q3": {
+            "question": "Wie lange müssen automatische Protokolle mindestens aufbewahrt werden?",
+            "a": "6 Monate",
+            "b": "1 Jahr",
+            "c": "3 Jahre",
+            "d": "10 Jahre",
+            "explanation": "Automatische Protokolle (Logs) müssen mindestens 6 Monate aufbewahrt werden."
+          },
+          "q4": {
+            "question": "Wie hoch können die Bußgelder bei Verstößen gegen den EU AI Act sein?",
+            "a": "Bis zu 1 Million Euro",
+            "b": "Bis zu 10 Millionen Euro",
+            "c": "Bis zu 20 Millionen Euro",
+            "d": "Bis zu 35 Millionen Euro oder 7% des Jahresumsatzes",
+            "explanation": "Bei Verstößen drohen Bußgelder von bis zu 35 Millionen Euro oder 7% des weltweiten Jahresumsatzes."
+          },
+          "q5": {
+            "question": "Wann kann ein Betreiber selbst als Anbieter gelten?",
+            "a": "Wenn er das System länger als ein Jahr einsetzt",
+            "b": "Wenn er ein Hochrisiko-System wesentlich verändert",
+            "c": "Wenn er mehr als 100 Mitarbeiter hat",
+            "d": "Nie, Betreiber sind immer Betreiber",
+            "explanation": "Betreiber, die ein Hochrisiko-System wesentlich verändern, können selbst als Anbieter gelten."
+          }
+        }
+      },
+      "m4": {
+        "l1": {
+          "title": "Informationspflichten",
+          "content": "Der EU AI Act sieht umfangreiche Transparenzpflichten vor:\n\nFür alle KI-Systeme mit begrenztem Risiko:\n- Nutzer müssen darüber informiert werden, dass sie mit einem KI-System interagieren (z.B. bei Chatbots).\n- KI-generierte oder manipulierte Inhalte (Deepfakes) müssen als solche gekennzeichnet werden.\n- KI-generierter Text, der zu Informationszwecken veröffentlicht wird, muss als maschinell erzeugt gekennzeichnet sein.\n\nFür Hochrisiko-KI-Systeme zusätzlich:\n- Gebrauchsanweisungen müssen klar und verständlich sein.\n- Leistungskennzahlen und bekannte Einschränkungen müssen offengelegt werden.\n- Der vorgesehene Verwendungszweck und vorhersehbare Fehlanwendungen sind zu dokumentieren.\n- Kontaktdaten des Anbieters müssen angegeben werden."
+        },
+        "l2": {
+          "title": "Kennzeichnung von KI-Inhalten",
+          "content": "Die Kennzeichnungspflichten im Detail:\n\nChatbots und Konversations-KI:\n- Nutzer müssen vor oder zu Beginn der Interaktion informiert werden, dass sie mit einem KI-System kommunizieren.\n- Ausnahme: Wenn dies aus den Umständen offensichtlich ist.\n\nDeepfakes und synthetische Medien:\n- Bild-, Audio- und Videoinhalte, die durch KI erzeugt oder manipuliert wurden, müssen maschinenlesbar als KI-generiert gekennzeichnet werden.\n- Die Kennzeichnung muss bei der Veröffentlichung deutlich sichtbar sein.\n\nKI-generierter Text:\n- Texte, die von KI erzeugt und zu Informationszwecken veröffentlicht werden, müssen als maschinell erzeugt gekennzeichnet sein.\n- Ausnahme: Wenn der Text einer menschlichen Überprüfung unterzogen wurde und eine Person die redaktionelle Verantwortung trägt."
+        },
+        "l3": {
+          "title": "Menschliche Aufsicht",
+          "content": "Anforderungen an die menschliche Aufsicht bei Hochrisiko-KI:\n\n- Das System muss so gestaltet sein, dass es von natürlichen Personen wirksam überwacht werden kann.\n- Überwachungspersonen müssen in der Lage sein, die Fähigkeiten und Grenzen des Systems zu verstehen.\n- Sie müssen Anzeichen für Anomalien, Fehlfunktionen und unerwartetes Verhalten erkennen können.\n- Es muss möglich sein, das System jederzeit zu unterbrechen oder abzuschalten (Stop-Button).\n- Die Überwachungsperson muss die Ausgabe des Systems ignorieren oder übersteuern können.\n\nDie menschliche Aufsicht dient dazu, Automatisierungsbias zu vermeiden - die Tendenz, KI-Entscheidungen unkritisch zu übernehmen.\n\nWichtig: Die Personen, die mit der menschlichen Aufsicht betraut sind, müssen angemessen geschult sein (Art. 4 KI-Kompetenz)."
+        },
+        "quiz": {
+          "q1": {
+            "question": "Wann müssen Chatbot-Nutzer über die KI-Interaktion informiert werden?",
+            "a": "Nach der Interaktion",
+            "b": "Nur auf Nachfrage",
+            "c": "Vor oder zu Beginn der Interaktion",
+            "d": "Nie, wenn der Chatbot gut genug ist",
+            "explanation": "Nutzer müssen vor oder zu Beginn der Interaktion informiert werden, dass sie mit einem KI-System kommunizieren."
+          },
+          "q2": {
+            "question": "Was muss bei Deepfake-Inhalten geschehen?",
+            "a": "Sie müssen maschinenlesbar als KI-generiert gekennzeichnet werden",
+            "b": "Sie sind grundsätzlich verboten",
+            "c": "Sie brauchen nur intern dokumentiert zu werden",
+            "d": "Nur bei kommerzieller Nutzung kennzeichnen",
+            "explanation": "Deepfake-Inhalte müssen maschinenlesbar als KI-generiert gekennzeichnet werden."
+          },
+          "q3": {
+            "question": "Was bedeutet 'Automatisierungsbias'?",
+            "a": "KI bevorzugt automatisierte Prozesse",
+            "b": "Die Tendenz, KI-Entscheidungen unkritisch zu übernehmen",
+            "c": "Ein technischer Fehler in der KI",
+            "d": "Die Automatisierung von Vorurteilen",
+            "explanation": "Automatisierungsbias beschreibt die Tendenz von Menschen, KI-Entscheidungen unkritisch zu übernehmen, ohne sie zu hinterfragen."
+          },
+          "q4": {
+            "question": "Welche Fähigkeit muss eine Überwachungsperson haben?",
+            "a": "Programmieren können",
+            "b": "Das System selbst entwickelt haben",
+            "c": "KI-Forschung betrieben haben",
+            "d": "Das System jederzeit unterbrechen oder abschalten können",
+            "explanation": "Überwachungspersonen müssen in der Lage sein, das System jederzeit zu unterbrechen oder abzuschalten."
+          },
+          "q5": {
+            "question": "Wann muss KI-generierter Text NICHT als solcher gekennzeichnet werden?",
+            "a": "Wenn er einer menschlichen Überprüfung unterzogen wurde und eine Person die redaktionelle Verantwortung trägt",
+            "b": "Wenn er kürzer als 100 Wörter ist",
+            "c": "Wenn er für interne Zwecke verwendet wird",
+            "d": "Wenn er von einer öffentlichen Stelle erzeugt wurde",
+            "explanation": "KI-generierter Text muss nicht gekennzeichnet werden, wenn er einer menschlichen Überprüfung unterzogen wurde und eine Person die redaktionelle Verantwortung trägt."
+          }
+        }
+      },
+      "m5": {
+        "l1": {
+          "title": "Risikomanagementsystem aufbauen",
+          "content": "Ein Risikomanagementsystem nach Art. 9 EU AI Act umfasst:\n\n1. Identifikation und Analyse von Risiken: Ermitteln Sie alle bekannten und vorhersehbaren Risiken für Gesundheit, Sicherheit und Grundrechte.\n\n2. Risikobewertung: Bewerten Sie die Eintrittswahrscheinlichkeit und das Schadensausmaß jedes identifizierten Risikos.\n\n3. Risikominderungsmaßnahmen: Entwickeln und implementieren Sie Maßnahmen zur Reduzierung der identifizierten Risiken auf ein akzeptables Niveau.\n\n4. Testen: Führen Sie geeignete Tests durch, um die Wirksamkeit der Risikominderungsmaßnahmen zu überprüfen. Tests müssen vor dem Inverkehrbringen und bei wesentlichen Änderungen durchgeführt werden.\n\n5. Kontinuierliche Überwachung: Das Risikomanagementsystem muss während des gesamten Lebenszyklus des KI-Systems aufrechterhalten und aktualisiert werden.\n\nDas System muss dokumentiert und den zuständigen Behörden auf Anfrage vorgelegt werden können."
+        },
+        "l2": {
+          "title": "Qualitätsmanagement für KI",
+          "content": "Ein Qualitätsmanagementsystem nach Art. 17 EU AI Act muss folgende Aspekte abdecken:\n\n- Strategie zur Einhaltung der regulatorischen Anforderungen\n- Verfahren für die Konzeption, Entwicklung und Prüfung des KI-Systems\n- Techniken und Verfahren für das Datenmanagement\n- Verfahren zur Dokumentenlenkung\n- Verfahren für das Risikomanagement\n- Einrichtung eines Systems zur Meldung schwerwiegender Vorfälle\n- Verfahren für die Kommunikation mit zuständigen Behörden\n- Verfahren für die Aufzeichnung und Aufbewahrung relevanter Informationen\n- Verfahren für das Ressourcenmanagement (einschließlich Personalqualifikation)\n- Rahmen für die Rechenschaftspflicht des Managements\n\nDas QMS sollte in die bestehenden Qualitätsmanagementprozesse des Unternehmens integriert werden."
+        },
+        "l3": {
+          "title": "Konformitätsbewertung vorbereiten",
+          "content": "Die Konformitätsbewertung nach Art. 43 EU AI Act umfasst:\n\nInterne Konformitätsbewertung (für die meisten Hochrisiko-Systeme):\n- Überprüfung, ob das QMS den Anforderungen entspricht\n- Prüfung der technischen Dokumentation\n- Verifizierung, dass Design und Entwicklung den Anforderungen entsprechen\n- Erstellung der EU-Konformitätserklärung\n- Anbringung der CE-Kennzeichnung\n\nBewertung durch Dritte (bei bestimmten Systemen, z.B. biometrische Identifizierung):\n- Eine benannte Stelle (Notified Body) führt die Bewertung durch\n- Zusätzliche Prüfungen und Zertifizierung erforderlich\n\nEU-Datenbankregistrierung:\n- Vor dem Inverkehrbringen muss das System in der öffentlichen EU-Datenbank registriert werden\n- Informationen über den Anbieter, das System und seine Konformität werden eingetragen\n\nNach erfolgreicher Bewertung kann das CE-Zeichen angebracht und das System in Verkehr gebracht werden."
+        },
+        "quiz": {
+          "q1": {
+            "question": "Was ist der erste Schritt beim Aufbau eines Risikomanagementsystems?",
+            "a": "CE-Kennzeichnung anbringen",
+            "b": "Identifikation und Analyse von Risiken",
+            "c": "Konformitätserklärung erstellen",
+            "d": "Behörden informieren",
+            "explanation": "Der erste Schritt ist die Identifikation und Analyse aller bekannten und vorhersehbaren Risiken."
+          },
+          "q2": {
+            "question": "Was umfasst ein Qualitätsmanagementsystem nach dem EU AI Act NICHT?",
+            "a": "Verfahren für das Datenmanagement",
+            "b": "Verfahren zur Dokumentenlenkung",
+            "c": "Gewinnoptimierungsstrategien",
+            "d": "Verfahren für die Meldung schwerwiegender Vorfälle",
+            "explanation": "Gewinnoptimierungsstrategien sind kein Bestandteil der QMS-Anforderungen nach Art. 17 EU AI Act."
+          },
+          "q3": {
+            "question": "Wann muss eine Konformitätsbewertung durch Dritte erfolgen?",
+            "a": "Bei bestimmten Systemen, z.B. biometrische Identifizierung",
+            "b": "Bei allen KI-Systemen",
+            "c": "Nie, nur interne Bewertungen sind erforderlich",
+            "d": "Nur bei Systemen mit minimalem Risiko",
+            "explanation": "Bei bestimmten Hochrisiko-Systemen, wie z.B. biometrischer Identifizierung, muss eine Bewertung durch eine benannte Stelle erfolgen."
+          },
+          "q4": {
+            "question": "Was muss vor dem Inverkehrbringen eines Hochrisiko-KI-Systems geschehen?",
+            "a": "Nur ein interner Test genügt",
+            "b": "Veröffentlichung des Quellcodes",
+            "c": "Genehmigung durch die EU-Kommission",
+            "d": "Registrierung in der EU-Datenbank",
+            "explanation": "Vor dem Inverkehrbringen muss das Hochrisiko-KI-System in der öffentlichen EU-Datenbank registriert werden."
+          },
+          "q5": {
+            "question": "Wann muss das Risikomanagementsystem aktualisiert werden?",
+            "a": "Nur bei der Erstentwicklung",
+            "b": "Während des gesamten Lebenszyklus des KI-Systems",
+            "c": "Nur bei Beschwerden",
+            "d": "Alle 5 Jahre",
+            "explanation": "Das Risikomanagementsystem muss während des gesamten Lebenszyklus des KI-Systems aufrechterhalten und aktualisiert werden."
+          }
+        }
+      }
+    }
+  }
+}
