@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 130" fill="none">
+  <!-- wil-AI logo for dark backgrounds: white WA + red dot -->
+  <polyline points="12,20 46,110 80,35 114,110 148,20"
+    stroke="#F5F5F5" stroke-width="26" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+  <polyline points="114,110 162,20 196,110"
+    stroke="#F5F5F5" stroke-width="26" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
+  <circle cx="172" cy="88" r="10" fill="#C0392B"/>
+</svg>

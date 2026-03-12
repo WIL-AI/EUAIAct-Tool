@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next'
 import { clsx } from 'clsx'
 import { ShieldCheck, GraduationCap, Settings, X } from 'lucide-react'
 import { useUIStore } from '../../stores/uiStore'
+import logoLight from '../../assets/logo-light.svg'
+import logoDark from '../../assets/logo-dark.svg'
 
 const navItems = [
   { to: '/', icon: ShieldCheck, label: 'nav.compliance' },
@@ -12,7 +14,7 @@ const navItems = [
 
 export function Sidebar() {
   const { t } = useTranslation()
-  const { sidebarOpen, toggleSidebar } = useUIStore()
+  const { sidebarOpen, toggleSidebar, theme } = useUIStore()
 
   return (
     <>
@@ -27,10 +29,17 @@ export function Sidebar() {
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
-        <div className="flex h-16 items-center justify-between border-b border-gray-200 px-6 dark:border-gray-700">
-          <div>
-            <h1 className="text-lg font-bold text-primary-600">{t('app.title')}</h1>
-            <p className="text-xs text-gray-400">{t('app.subtitle')}</p>
+        <div className="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+          <div className="flex items-center gap-3">
+            <img
+              src={theme === 'dark' ? logoDark : logoLight}
+              alt="wil-AI"
+              className="h-10 w-auto"
+            />
+            <div>
+              <h1 className="text-sm font-bold text-primary-600">{t('app.title')}</h1>
+              <p className="text-xs text-gray-400">{t('app.subtitle')}</p>
+            </div>
           </div>
           <button onClick={toggleSidebar} className="lg:hidden">
             <X className="h-5 w-5" />
