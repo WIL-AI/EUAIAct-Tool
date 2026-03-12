@@ -39,7 +39,7 @@ function generateCertificateId(name: string): string {
 
 const saved = loadState()
 
-export const useTrainingStore = create<TrainingState>((set, get) => ({
+export const useTrainingStore = create<TrainingState>((set) => ({
   participantName: saved?.participantName || '',
   moduleProgress: saved?.moduleProgress || {},
   certificateId: saved?.certificateId || null,

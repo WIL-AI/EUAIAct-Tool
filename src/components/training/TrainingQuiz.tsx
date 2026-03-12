@@ -36,7 +36,6 @@ export function TrainingQuiz({ questions, onComplete }: TrainingQuizProps) {
       setSelectedValue(null)
       setAnswered(false)
     } else {
-      const finalCorrect = correctCount + (isCorrect ? 0 : 0)
       setShowResult(true)
     }
   }
