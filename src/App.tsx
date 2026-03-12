@@ -6,7 +6,7 @@ import { SettingsPage } from './pages/SettingsPage'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/EUAIAct-Tool">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<CompliancePage />} />
