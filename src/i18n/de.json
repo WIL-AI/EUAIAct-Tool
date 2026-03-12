@@ -15,24 +15,30 @@
     "themeLight": "Hell",
     "themeDark": "Dunkel"
   },
+  "disclaimer": {
+    "footer": "Dieses Tool dient ausschließlich der Orientierung und stellt keine Rechtsberatung im Sinne des RDG dar. Bitte klären Sie alle Ergebnisse mit Ihrem Rechtsberater ab.",
+    "wizard": "Diese Einschätzung ist eine unverbindliche Orientierungshilfe. Sie ersetzt keine rechtliche Beratung. Besprechen Sie das Ergebnis mit Ihrem Rechtsberater.",
+    "certificate": "Dieses Zertifikat ist ein Teilnahmenachweis und kein rechtsverbindliches Dokument. Es ersetzt keine anwaltliche Beratung."
+  },
   "compliance": {
-    "title": "EU AI Act Compliance-Check",
+    "title": "EU AI Act Orientierungshilfe",
     "tabs": {
-      "classify": "Risikoklassifizierung",
-      "checklist": "Checkliste",
-      "dashboard": "Dashboard"
+      "classify": "Statusermittlung",
+      "checklist": "Handlungsfelder",
+      "dashboard": "Übersicht"
     },
     "wizard": {
-      "title": "Risikoklassifizierungs-Assistent",
-      "subtitle": "Beantworten Sie die folgenden Fragen, um die Risikostufe Ihres KI-Systems zu bestimmen.",
+      "title": "Orientierungshilfe zur Risikoeinstufung",
+      "subtitle": "Beantworten Sie die folgenden Fragen, um eine erste Einschätzung zur möglichen Risikostufe Ihres KI-Systems zu erhalten. Das Ergebnis dient als Gesprächsgrundlage für Ihren Rechtsberater.",
       "question": "Frage {{current}} von {{total}}",
       "back": "Zurück",
       "next": "Weiter",
-      "viewResults": "Ergebnis anzeigen",
-      "resultTitle": "Klassifizierungsergebnis",
-      "resultDescription": "Basierend auf Ihren Antworten wird Ihr KI-System wie folgt eingestuft:",
-      "continueToChecklist": "Weiter zur Checkliste",
-      "retake": "Neu bewerten",
+      "viewResults": "Einschätzung anzeigen",
+      "resultTitle": "Vorläufige Einschätzung",
+      "resultDescription": "Basierend auf Ihren Antworten ergibt sich folgende vorläufige Einordnung Ihres KI-Systems:",
+      "continueToChecklist": "Weiter zu den Handlungsfeldern",
+      "retake": "Erneut durchführen",
+      "legalHint": "Diese Einschätzung ist unverbindlich und ersetzt keine Rechtsberatung. Besprechen Sie das Ergebnis mit Ihrem Rechtsberater, um die endgültige Einstufung vorzunehmen.",
       "q1": "Wird Ihr KI-System für einen der folgenden Zwecke eingesetzt?",
       "q1_social_scoring": "Social Scoring durch Behörden",
       "q1_biometric": "Biometrische Echtzeit-Identifizierung in öffentlichen Räumen",
@@ -67,15 +73,15 @@
       "high": "Hohes Risiko",
       "limited": "Begrenztes Risiko",
       "minimal": "Minimales Risiko",
-      "unacceptableDesc": "Dieses KI-System ist gemäß dem EU AI Act verboten.",
-      "highDesc": "Dieses KI-System erfordert umfassende Compliance-Maßnahmen.",
-      "limitedDesc": "Dieses KI-System unterliegt Transparenzpflichten.",
-      "minimalDesc": "Keine spezifischen Anforderungen. Freiwillige Verhaltenskodizes gelten."
+      "unacceptableDesc": "Dieses KI-System fällt voraussichtlich unter die verbotenen Praktiken des EU AI Act. Klären Sie dies umgehend mit Ihrem Rechtsberater.",
+      "highDesc": "Dieses KI-System wird voraussichtlich umfassende Compliance-Maßnahmen erfordern. Lassen Sie die endgültige Einstufung durch Ihren Rechtsberater bestätigen.",
+      "limitedDesc": "Dieses KI-System unterliegt voraussichtlich Transparenzpflichten. Ihr Rechtsberater kann den konkreten Umfang klären.",
+      "minimalDesc": "Voraussichtlich keine spezifischen Anforderungen. Freiwillige Verhaltenskodizes werden empfohlen. Bestätigung durch Ihren Rechtsberater wird empfohlen."
     },
     "checklist": {
       "title": "Compliance-Checkliste",
       "progress": "{{checked}} von {{total}} erledigt",
-      "notClassified": "Bitte führen Sie zuerst die Risikoklassifizierung durch.",
+      "notClassified": "Bitte führen Sie zuerst die Statusermittlung durch.",
       "prohibited": "Verbotenes System",
       "prohibitedDesc": "Ihr KI-System fällt unter die verbotenen Praktiken des EU AI Act.",
       "prohibited_1": "Dieses KI-System ist gemäß Artikel 5 des EU AI Act verboten",
@@ -150,24 +156,25 @@
       "voluntary_4": "Auf unbeabsichtigte Auswirkungen überwachen"
     },
     "dashboard": {
-      "title": "Compliance-Dashboard",
-      "riskLevel": "Risikostufe",
-      "complianceScore": "Compliance-Score",
-      "itemsCompleted": "Abgeschlossen",
-      "categoryBreakdown": "Aufschlüsselung nach Kategorien",
-      "exportReport": "Bericht exportieren",
-      "resetAssessment": "Bewertung zurücksetzen",
-      "resetConfirm": "Alle Compliance-Daten werden gelöscht. Sind Sie sicher?",
-      "noData": "Führen Sie die Risikoklassifizierung durch, um das Dashboard zu sehen."
+      "title": "Statusübersicht",
+      "riskLevel": "Vorläufige Risikostufe",
+      "complianceScore": "Bearbeitungsstand",
+      "itemsCompleted": "Bearbeitet",
+      "categoryBreakdown": "Aufschlüsselung nach Handlungsfeldern",
+      "exportReport": "Statusbericht exportieren",
+      "resetAssessment": "Zurücksetzen",
+      "resetConfirm": "Alle Daten werden gelöscht. Sind Sie sicher?",
+      "noData": "Führen Sie die Statusermittlung durch, um die Übersicht zu sehen."
     },
     "report": {
-      "title": "EU AI Act Compliance-Bericht",
+      "title": "EU AI Act – Statusbericht zur Orientierung",
       "generatedOn": "Erstellt am",
-      "riskClassification": "Risikoklassifizierung",
-      "requirementsStatus": "Status der Anforderungen",
-      "completed": "Erledigt",
-      "pending": "Ausstehend",
-      "overallScore": "Gesamter Compliance-Score"
+      "riskClassification": "Vorläufige Risikoeinstufung",
+      "requirementsStatus": "Status der Handlungsfelder",
+      "completed": "Bearbeitet",
+      "pending": "Offen",
+      "overallScore": "Bearbeitungsstand",
+      "disclaimer": "HINWEIS: Dieser Bericht dient ausschließlich der Orientierung und stellt keine Rechtsberatung dar. Die endgültige Einstufung und Bewertung muss durch einen qualifizierten Rechtsberater erfolgen."
     }
   },
   "training": {

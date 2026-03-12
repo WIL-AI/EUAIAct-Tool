@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { AlertTriangle, CheckCircle, ArrowRight, ArrowLeft, RotateCcw } from 'lucide-react'
+import { AlertTriangle, CheckCircle, ArrowRight, ArrowLeft, RotateCcw, Scale } from 'lucide-react'
 import { Card } from '../ui/Card'
 import { Button } from '../ui/Button'
 import { Badge } from '../ui/Badge'
@@ -96,6 +96,15 @@ export function RiskWizard({ onComplete }: RiskWizardProps) {
             {t(`compliance.riskLevels.${riskLevel}Desc`)}
           </p>
         </Card>
+
+        <div className="rounded-lg border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
+          <div className="flex gap-3">
+            <Scale className="h-5 w-5 flex-shrink-0 text-amber-600 dark:text-amber-400" />
+            <p className="text-sm text-amber-800 dark:text-amber-300">
+              {t('compliance.wizard.legalHint')}
+            </p>
+          </div>
+        </div>
 
         <div className="flex gap-3">
           <Button variant="ghost" onClick={handleRetake}>

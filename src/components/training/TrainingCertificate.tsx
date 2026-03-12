@@ -95,6 +95,7 @@ export function TrainingCertificate({ onBack }: TrainingCertificateProps) {
             {t('training.certificate.certificateId')}: {certificateId}
           </p>
           <p className="mt-1 text-xs text-gray-400">{t('training.certificate.legalRef')}</p>
+          <p className="mt-3 text-xs italic text-gray-400">{t('disclaimer.certificate')}</p>
         </div>
       </div>
     </div>

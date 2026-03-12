@@ -15,24 +15,30 @@
     "themeLight": "Light",
     "themeDark": "Dark"
   },
+  "disclaimer": {
+    "footer": "This tool is for orientation purposes only and does not constitute legal advice. Please discuss all results with your legal counsel.",
+    "wizard": "This assessment is a non-binding orientation aid. It does not replace legal advice. Discuss the result with your legal counsel.",
+    "certificate": "This certificate is a proof of participation and not a legally binding document. It does not replace legal advice."
+  },
   "compliance": {
-    "title": "EU AI Act Compliance Check",
+    "title": "EU AI Act Orientation Guide",
     "tabs": {
-      "classify": "Risk Classification",
-      "checklist": "Checklist",
-      "dashboard": "Dashboard"
+      "classify": "Status Assessment",
+      "checklist": "Action Areas",
+      "dashboard": "Overview"
     },
     "wizard": {
-      "title": "Risk Classification Wizard",
-      "subtitle": "Answer the following questions to determine the risk level of your AI system.",
+      "title": "Risk Level Orientation Guide",
+      "subtitle": "Answer the following questions to get an initial assessment of the potential risk level of your AI system. The result serves as a basis for discussion with your legal counsel.",
       "question": "Question {{current}} of {{total}}",
       "back": "Back",
       "next": "Next",
-      "viewResults": "View Results",
-      "resultTitle": "Classification Result",
-      "resultDescription": "Based on your answers, your AI system is classified as:",
-      "continueToChecklist": "Continue to Checklist",
+      "viewResults": "View Assessment",
+      "resultTitle": "Preliminary Assessment",
+      "resultDescription": "Based on your answers, the following preliminary classification of your AI system is indicated:",
+      "continueToChecklist": "Continue to Action Areas",
       "retake": "Retake Assessment",
+      "legalHint": "This assessment is non-binding and does not replace legal advice. Discuss the result with your legal counsel to determine the final classification.",
       "q1": "Is your AI system used for any of the following purposes?",
       "q1_social_scoring": "Social scoring by public authorities",
       "q1_biometric": "Real-time biometric identification in public spaces",
@@ -67,15 +73,15 @@
       "high": "High Risk",
       "limited": "Limited Risk",
       "minimal": "Minimal Risk",
-      "unacceptableDesc": "This AI system is prohibited under the EU AI Act.",
-      "highDesc": "This AI system requires comprehensive compliance measures.",
-      "limitedDesc": "This AI system has transparency obligations.",
-      "minimalDesc": "No specific requirements. Voluntary codes of conduct apply."
+      "unacceptableDesc": "This AI system is likely to fall under the prohibited practices of the EU AI Act. Please consult your legal counsel immediately.",
+      "highDesc": "This AI system will likely require comprehensive compliance measures. Have the final classification confirmed by your legal counsel.",
+      "limitedDesc": "This AI system is likely subject to transparency obligations. Your legal counsel can clarify the specific scope.",
+      "minimalDesc": "Likely no specific requirements. Voluntary codes of conduct are recommended. Confirmation by your legal counsel is advised."
     },
     "checklist": {
       "title": "Compliance Checklist",
       "progress": "{{checked}} of {{total}} completed",
-      "notClassified": "Please complete the risk classification first.",
+      "notClassified": "Please complete the status assessment first.",
       "prohibited": "Prohibited System",
       "prohibitedDesc": "Your AI system falls under the prohibited practices of the EU AI Act.",
       "prohibited_1": "This AI system is prohibited under Article 5 of the EU AI Act",
@@ -150,24 +156,25 @@
       "voluntary_4": "Monitor for unintended effects"
     },
     "dashboard": {
-      "title": "Compliance Dashboard",
-      "riskLevel": "Risk Level",
-      "complianceScore": "Compliance Score",
+      "title": "Status Overview",
+      "riskLevel": "Preliminary Risk Level",
+      "complianceScore": "Progress",
       "itemsCompleted": "Completed",
-      "categoryBreakdown": "Category Breakdown",
-      "exportReport": "Export Report",
-      "resetAssessment": "Reset Assessment",
-      "resetConfirm": "All compliance data will be deleted. Are you sure?",
-      "noData": "Complete the risk classification to see your dashboard."
+      "categoryBreakdown": "Action Areas Breakdown",
+      "exportReport": "Export Status Report",
+      "resetAssessment": "Reset",
+      "resetConfirm": "All data will be deleted. Are you sure?",
+      "noData": "Complete the status assessment to see your overview."
     },
     "report": {
-      "title": "EU AI Act Compliance Report",
+      "title": "EU AI Act – Orientation Status Report",
       "generatedOn": "Generated on",
-      "riskClassification": "Risk Classification",
-      "requirementsStatus": "Requirements Status",
+      "riskClassification": "Preliminary Risk Classification",
+      "requirementsStatus": "Action Areas Status",
       "completed": "Completed",
-      "pending": "Pending",
-      "overallScore": "Overall Compliance Score"
+      "pending": "Open",
+      "overallScore": "Progress",
+      "disclaimer": "NOTE: This report is for orientation purposes only and does not constitute legal advice. The final classification and assessment must be made by a qualified legal counsel."
     }
   },
   "training": {
